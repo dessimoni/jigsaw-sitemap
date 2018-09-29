@@ -9,7 +9,7 @@ Sitemap and sitemap index builder for [Jigsaw](https://jigsaw.tighten.co).
 Add as an event [listener](https://jigsaw.tighten.co/docs/event-listeners) in `bootstrap.php`.
 
 ```php
-use Eastslopestudio\JigsawSitemap\GenerateSitemapListener;
+use Eastslopestudio\JigsawSitemap\SitemapListener;
 
 /**
  * An afterBuild event is fired after the build is complete, and all output files
