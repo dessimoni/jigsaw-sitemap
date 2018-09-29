@@ -20,6 +20,6 @@ use Eastslopestudio\JigsawSitemap\SitemapListener;
  * @link http://jigsaw.tighten.co/docs/event-listeners/
  */
 $events->afterBuild([
-    GenerateSitemapListener::class,
+    SitemapListener::class,
 ]);
 ```
