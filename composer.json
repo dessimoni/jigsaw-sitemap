@@ -1,0 +1,26 @@
+{
+    "name": "eastslopestudio/jigsaw-sitemap",
+    "description": "Sitemap and sitemap index builder for Jigsaw.",
+    "keywords": [
+        "laravel",
+        "jigsaw",
+        "sitemap"
+    ],
+    "homepage": "https://github.com/eastslopestudio/jigsaw-sitemap",
+    "authors": [
+        {
+            "name": "Ryan Scherler",
+            "email": "ryan@eastslope.studio",
+            "homepage": "https://eastslopestudio.com/"
+        }
+    ],
+    "require": {
+        "tightenco/jigsaw": "^1.2",
+        "samdark/sitemap": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eastslopestudio\\JigsawSitemap\\": "src"
+        }
+    }
+}
