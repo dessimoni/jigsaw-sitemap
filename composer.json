@@ -1,6 +1,7 @@
 {
     "name": "eastslopestudio/jigsaw-sitemap",
     "description": "Sitemap and sitemap index builder for Jigsaw.",
+    "license": "MIT",
     "keywords": [
         "laravel",
         "jigsaw",
