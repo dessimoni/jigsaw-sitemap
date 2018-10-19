@@ -23,3 +23,13 @@ $events->afterBuild([
     SitemapListener::class,
 ]);
 ```
+
+> Note: You can exclude files from the sitemap by adding the following to your `config.php`:
+
+```php
+'sitemap_exclude' => [
+    '.htaccess',
+    'favicon.ico',
+    // ...
+],
+```
