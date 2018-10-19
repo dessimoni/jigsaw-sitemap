@@ -9,14 +9,15 @@ class SitemapListener
 {
 
     /**
-     * Invalid files
+     * Jigsaw instance.
      *
-     * @var array
      */
-    protected $invalidAssets = ['.htaccess', 'favicon.ico'];
+    protected $jigsaw;
 
     public function handle(Jigsaw $jigsaw)
     {
+        $this->jigsaw = $jigsaw;
+        
         $baseUrl = $jigsaw->getConfig('baseUrl');
         if (empty($baseUrl)) {
             return;
@@ -35,6 +36,8 @@ class SitemapListener
 
     private function isAsset($path)
     {
-        return starts_with($path, '/assets') || str_contains($path, $this->invalidAssets);
+        $excluded = $this->jigsaw->getConfig('sitemap_exclude');
+        $invalidAssets = $excluded ? (array) $excluded : [];
+        return starts_with($path, '/assets') || str_contains($path, $invalidAssets);
     }
 }
