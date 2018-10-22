@@ -37,7 +37,7 @@ class SitemapListener
     private function isAsset($path)
     {
         $excluded = $this->jigsaw->getConfig('sitemap_exclude');
-        $invalidAssets = $excluded ? (array) $excluded : [];
+        $invalidAssets = $excluded ? $excluded->toArray() : [];
         return starts_with($path, '/assets') || str_contains($path, $invalidAssets);
     }
 }
