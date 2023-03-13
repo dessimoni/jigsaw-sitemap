@@ -27,7 +27,7 @@ class SitemapListener
 
         collect($jigsaw->getOutputPaths())->each(function ($path) use ($baseUrl, $sitemap) {
             if (!$this->isAsset($path)) {
-                $sitemap->addItem($baseUrl . $path, time(), Sitemap::MONTHLY);
+                $sitemap->addItem(\Illuminate\Support\Str::finish($baseUrl . $path, '/'), time(), Sitemap::MONTHLY);
             }
         });
 
