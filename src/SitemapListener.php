@@ -32,6 +32,10 @@ class SitemapListener
         });
 
         $sitemap->write();
+
+        // Robots.txt
+        $robots = "User-agent: *\nAllow: /\n\nSitemap: ".$jigsaw->getConfig('baseUrl')."/sitemap.xml";
+        file_put_contents($jigsaw->getDestinationPath() . '/robots.txt', $robots);
     }
 
     private function isAsset($path)
