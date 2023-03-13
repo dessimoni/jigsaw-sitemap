@@ -38,6 +38,6 @@ class SitemapListener
     {
         $excluded = $this->jigsaw->getConfig('sitemap_exclude');
         $invalidAssets = $excluded ? $excluded->toArray() : [];
-        return starts_with($path, '/assets') || str_contains($path, $invalidAssets);
+        return \Illuminate\Support\Str::startsWith($path, '/assets') || \Illuminate\Support\Str::contains($path, $invalidAssets);
     }
 }
